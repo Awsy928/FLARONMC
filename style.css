@@ -112,6 +112,14 @@ transform:translateY(-8px);
 animation:slideUp .8s ease;
 }
 
+.store-logo {
+    display: block;
+    width: 150px;
+    max-width: 60%;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 0 20px #7cff75);
+}
+
 @keyframes slideUp{
 from{
 opacity:0;
