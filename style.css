@@ -1,0 +1,11 @@
+
+body{margin:0;font-family:Arial;background:#07110a;color:#fff}
+nav{background:#0d1b12;padding:15px;display:flex;gap:15px;flex-wrap:wrap}
+a{color:#8cff8c;text-decoration:none}
+.hero{padding:80px;text-align:center}
+.card{background:#102017;padding:20px;border-radius:14px;margin:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
+.rank:hover{transform:translateY(-8px)}
+.rank{transition:.3s}
+input{padding:12px;width:250px}
+button{padding:12px 20px}
