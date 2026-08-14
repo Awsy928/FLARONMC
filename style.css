@@ -42,3 +42,83 @@ header{flex-direction:column;gap:15px}
 .hero h2{font-size:36px}
 .stats{grid-template-columns:1fr}
 }
+
+
+/* Smooth Animations */
+html{
+scroll-behavior:smooth;
+}
+
+body{
+animation:fadeInBody 1s ease;
+}
+
+@keyframes fadeInBody{
+from{opacity:0}
+to{opacity:1}
+}
+
+.brand img{
+animation:logoFloat 4s ease-in-out infinite;
+transition:.3s;
+}
+
+.brand img:hover{
+transform:scale(1.08);
+}
+
+@keyframes logoFloat{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+}
+
+.hero-logo{
+animation:heroFloat 5s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+}
+
+nav a{
+transition:.25s ease;
+}
+
+nav a:hover{
+transform:translateY(-2px);
+text-shadow:0 0 10px #7cff75;
+}
+
+.buttons a{
+transition:.3s ease;
+box-shadow:0 0 15px rgba(124,255,117,.25);
+}
+
+.buttons a:hover{
+transform:translateY(-4px) scale(1.04);
+box-shadow:0 0 25px rgba(124,255,117,.6);
+}
+
+.stats div,.card{
+transition:.3s ease;
+}
+
+.stats div:hover,.card:hover{
+transform:translateY(-8px);
+}
+
+.features,.stats,.hero{
+animation:slideUp .8s ease;
+}
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
