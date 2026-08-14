@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLARONMC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+
+<section class="hero">
+<h1>FLARONMC NETWORK</h1>
+<p class="subtitle">Premium Minecraft Community</p>
+
+<div class="stats">
+<div class="card">
+<h2 id="discord">1500+</h2>
+<p>Discord Members</p>
+</div>
+
+<div class="card">
+<h2 id="players">Loading...</h2>
+<p>Online Players</p>
+</div>
+
+<div class="card">
+<h2 id="status">Checking...</h2>
+<p>Server Status</p>
+</div>
+</div>
+
+<a class="btn" href="https://discord.gg/mZcaNwU9by">JOIN DISCORD</a>
+</section>
+
+<script>
+async function updateServer(){
+try{
+const r=await fetch('https://api.mcsrvstat.us/3/95.156.225.24:26178');
+const data=await r.json();
+document.getElementById('players').innerText=data.players?data.players.online:'0';
+document.getElementById('status').innerText=data.online?'ONLINE':'OFFLINE';
+}catch(e){
+document.getElementById('status').innerText='ERROR';
+}
+}
+updateServer();
+setInterval(updateServer,30000);
+</script>
+</body>
+</html>
